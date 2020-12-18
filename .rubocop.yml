@@ -37,10 +37,6 @@ Layout/ClosingParenthesisIndentation:
   Exclude:
     - 'lib/redmine/wiki_formatting/textile/redcloth3.rb'
 
-Layout/DotPosition:
-  Enabled: true
-  EnforcedStyle: trailing
-
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
   Exclude:
@@ -48,11 +44,6 @@ Layout/EmptyLinesAroundAccessModifier:
 
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
-
-Layout/FirstHashElementIndentation:
-  Enabled: true
-  Exclude:
-    - 'lib/redmine/wiki_formatting/textile/redcloth3.rb'
 
 Layout/LineLength:
   Enabled: true
@@ -189,10 +180,6 @@ Style/IdenticalConditionalBranches:
   Exclude:
     - 'config/initializers/10-patches.rb'
     - 'lib/redmine/wiki_formatting/textile/redcloth3.rb'
-
-Style/Lambda:
-  Enabled: true
-  EnforcedStyle: lambda
 
 Style/NegatedIfElseCondition:
   Enabled: false

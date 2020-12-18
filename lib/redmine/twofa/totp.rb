@@ -43,9 +43,9 @@ module Redmine
         verified_at = totp.verify(code.to_s, drift_behind: allowed_drift, after: last_verified_at)
         if verified_at
           @user.update!(twofa_totp_last_used_at: verified_at)
-          true
+          return true
         else
-          false
+          return false
         end
       end
 
@@ -54,12 +54,10 @@ module Redmine
       end
 
       def init_pairing_view_variables
-        super.merge(
-          {
-            provisioning_uri: provisioning_uri,
-            totp_key: @user.twofa_totp_key
-          }
-        )
+        super.merge({
+          provisioning_uri: provisioning_uri,
+          totp_key: @user.twofa_totp_key
+        })
       end
 
       private

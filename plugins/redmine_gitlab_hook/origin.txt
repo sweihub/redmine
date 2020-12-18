@@ -1,0 +1,1 @@
+https://github.com/phlegx/redmine_gitlab_hook.git

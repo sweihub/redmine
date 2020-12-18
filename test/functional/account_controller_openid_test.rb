@@ -62,6 +62,7 @@ class AccountControllerOpenidTest < Redmine::ControllerTest
     end
 
     def test_login_with_openid_for_existing_non_active_user
+      Setting.self_registration = '2'
       existing_user = User.new(:firstname => 'Cool',
                                :lastname => 'User',
                                :mail => 'user@somedomain.com',
@@ -69,12 +70,13 @@ class AccountControllerOpenidTest < Redmine::ControllerTest
                                :status => User::STATUS_REGISTERED)
       existing_user.login = 'cool_user'
       assert existing_user.save!
-      with_settings(
-        :openid => '1',
-        :self_registration => '2'
-      ) do
-        post(:login, :params => {:openid_url => existing_user.identity_url})
-      end
+
+      post(
+        :login,
+        :params => {
+          :openid_url => existing_user.identity_url
+        }
+      )
       assert_redirected_to '/login'
     end
 

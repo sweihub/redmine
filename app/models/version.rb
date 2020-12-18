@@ -318,19 +318,25 @@ class Version < ActiveRecord::Base
   def <=>(version)
     if self.effective_date
       if version.effective_date
+        # both have dates
         if self.effective_date == version.effective_date
-          name == version.name ? id <=> version.id : name <=> version.name
+          # 1. (v0.1) to (v0.2)
+          id <=> version.id
         else
+          # 2. (early) to (later)
           self.effective_date <=> version.effective_date
         end
       else
+        # 3. (date) to (no date)
         -1
       end
     else
       if version.effective_date
+        # 4. (date) to (no date)
         1
       else
-        name == version.name ? id <=> version.id : name <=> version.name
+        # 5. both no dates, order by id descent
+        version.id <=> id
       end
     end
   end

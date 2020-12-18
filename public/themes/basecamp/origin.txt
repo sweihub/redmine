@@ -1,0 +1,1 @@
+https://github.com/theill/redmine-basecamp-theme.git
