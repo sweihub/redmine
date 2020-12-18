@@ -134,11 +134,11 @@ p.breadcrumb {
 }
 
 /* Fields */
-input[type="text"], input[type="password"], textarea, select { padding: 2px; border: 1px solid #d7d7d7; }
-input[type="text"], input[type="password"] { padding: 3px; }
+input[type="text"], input[type="password"], textarea, select { border: 1px solid #d7d7d7; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { border: 1px solid #888866; }
-option { border-bottom: 1px dotted #d7d7d7; }
 input#issue_subject { font-size: 200%; width: 90%; }
+
+option { border-bottom: 1px dotted #d7d7d7; }
 
 textarea.wiki-edit { font-family: Cambria, Verdana, Serif; font-size: larger; }
 
@@ -154,3 +154,11 @@ div.splitcontentleft ol li, div.splitcontentleft ul li, div.wiki ol li, div.wiki
 div.wiki ul.toc li { padding: 0; }
 ol li ol li { list-style-type: lower-alpha; }
 ol li ol li ol li { list-style-type: lower-roman; }
+
+#roadmap h2 {
+  background-color: unset;
+  margin: unset;
+  padding: unset;
+  font-size: 20px;
+  color: #555;
+}
