@@ -528,6 +528,11 @@
     margin-top: -16px;
   }
 
+  /* gantt */
+  .controller-gantts #sidebar {
+    max-width: 150px;
+  }
+
   /* repository */
   .controller-repositories #content .contextual {
     margin-top: -5px;
@@ -584,7 +589,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-variant: small-caps;
   }
-
 
 }
 
