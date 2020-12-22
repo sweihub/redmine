@@ -155,7 +155,6 @@
 
   h2,
   .wiki h1 {
-    background-color: #edf3fe;
     margin-bottom: 24px;
   }
 
@@ -508,7 +507,7 @@
     list-style-type: lower-roman;
   }
 
-  /* RGB: 237, 243, 254 */
+  /* color: #edf3fe, RGB(237, 243, 254) */
   #content {
     background-image: url(../images/bg.png);
     background-repeat: repeat-x;
@@ -517,6 +516,11 @@
 
   .contextual {
     margin: unset;
+  }
+
+  /* my page */
+  .controller-my #content .contextual {
+    margin-top: -5px;
   }
 
   /* overview */
@@ -551,6 +555,12 @@
   h3,
   h4 {
     padding: unset;
+  }
+
+  .wiki h1,
+  .wiki h2,
+  .wiki h3 {
+    margin-left: 0px;
   }
 
   h2,
