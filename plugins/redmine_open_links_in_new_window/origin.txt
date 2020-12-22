@@ -1,0 +1,2 @@
+GitHub:
+git://github.com/Undev/redmine_open_links_in_new_window.git
