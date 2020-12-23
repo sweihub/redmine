@@ -242,7 +242,8 @@
   table.list tbody tr td.checkbox {
     border-bottom: solid 1px #ddd;
     font-size: 11px;
-    padding: 4px 10px 4px 3px;
+    text-align: center;
+    padding: 4px 3px 4px 3px;
   }
 
   table.list thead th {
