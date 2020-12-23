@@ -5,7 +5,7 @@
  *
  * @2009-11-16 - fix #3069
  * @2009-11-12 - styling "password" fields as well with a simple border (similar to other fields)
- * @2020-12-22 - fix for redmine 4.x
+ * @2020-12-22 - fix for redmine 4.x, Sunding Wei
  */
 
 @import url(../../../stylesheets/application.css);
@@ -263,12 +263,12 @@
     color: #000;
   }
 
-  /* Issues grid styles by priorities (provided by Wynn Netherland) */
+  /* issues grid styles by priorities (provided by Wynn Netherland) */
   table.list tr.issue a {
     color: #333;
   }
 
-  /*adjust the css according to your priority ids, for Redmine 2.1*/
+  /* adjust the css according to your priority ids, for Redmine 2.1 */
   tr.odd.priority-8,
   table.list tbody tr.odd.priority-8:hover {
     color: #559;
@@ -471,7 +471,7 @@
     font-size: larger;
   }
 
-  /* Misc */
+  /* misc */
   .box {
     background-color: #fcfcfc;
   }
