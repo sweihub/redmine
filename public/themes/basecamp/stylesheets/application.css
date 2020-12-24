@@ -153,8 +153,20 @@
     height: 36px;
     line-height: 36px;
     margin-top: -10px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     padding: unset;
+  }
+
+  /* reset the wiki h2 */
+  .wiki h2 {
+    margin: inherit !important;
+    line-height: inherit !important;
+    height: inherit !important;
+    padding: inherit !important;
+  }
+
+  #content p.subtitle {
+    margin: 0px 0 14px 0;
   }
 
   /* agile */
