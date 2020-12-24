@@ -150,13 +150,16 @@
   #content h2:nth-child(1),
   #content h2:nth-child(2),
   #content>div.wiki.wiki-page>h1:nth-child(2) {
+    height: 36px;
+    line-height: 36px;
+    margin-top: -10px;
     margin-bottom: 24px;
     padding: unset;
   }
 
   /* agile */
   #agile_live_search {
-    margin-top: -4px;
+    margin-top: -1px;
   }
 
   div.issue div.wiki h3 {

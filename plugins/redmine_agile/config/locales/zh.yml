@@ -32,16 +32,27 @@ zh:
   label_agile_charts_lead_time: 交付周期
   label_agile_charts_average_lead_time: 平均交付周期
   label_agile_chart_plural: 敏捷图标
+  label_agile_chart_burndown: 燃尽图
+  label_agile_chart_units: 单位
+  label_agile_interval_size: 间隔
+  label_agile_day: 天 
+  label_agile_week: 周 
+  label_agile_month: 月
+  label_agile_quarter: 季
+  label_agile_year: 年
+  label_cards_search: 按标题检索
   permission_view_agile_charts: 浏览敏捷图标
   label_agile_ideal_work_remaining: 理想
   label_agile_actual_work_remaining: 实际
   label_agile_chart: 图表
+  label_agile_charts: 图表
   label_agile_date_from: 自
   label_agile_date_to: 至
   label_agile_chart_dates: 图标间隔
   label_agile_weighed_ideal_work_remaining: 理想权衡
   label_agile_status_colors: 状态颜色
-  label_agile_charts_burnup: 问题燃烧图
+  label_agile_chart_burnup: 燃烧图
+  label_agile_charts_burnup: 燃烧图
   label_agile_charts_number_of_days: 天数
   label_agile_too_many_items: "该图表因超出可显示的最大项目数而不能被创建(%{max})"
   label_agile_time_reports_items_limit: 时间条目基于图表的问题限制

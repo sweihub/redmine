@@ -1309,17 +1309,17 @@ zh:
   label_relations_mapping: Relations mapping
   label_import_users: Import users
   label_days_to_html: "%{days} days up to %{date}"
-  setting_twofa: Two-factor authentication
+  setting_twofa: 双因子验证
   label_optional: optional
   label_required_lower: required
   button_disable: Disable
-  twofa__totp__name: Authenticator app
+  twofa__totp__name: 身份验证器应用
   twofa__totp__text_pairing_info_html: Scan this QR code or enter the plain text key
     into a TOTP app (e.g. <a href="https://support.google.com/accounts/answer/1066447">Google
     Authenticator</a>, <a href="https://authy.com/download/">Authy</a>, <a href="https://guide.duo.com/third-party-accounts">Duo
     Mobile</a>) and enter the code in the field below to activate two-factor authentication.
   twofa__totp__label_plain_text_key: Plain text key
-  twofa__totp__label_activate: Enable authenticator app
+  twofa__totp__label_activate: 启用身份验证器应用
   twofa_currently_active: 'Currently active: %{twofa_scheme_name}'
   twofa_not_active: Not activated
   twofa_label_code: Code
@@ -1327,7 +1327,7 @@ zh:
     two-factor authentication devices for all users.
   twofa_hint_required_html: Setting <strong>%{label}</strong> will require all users
     to set up two-factor authentication at their next login.
-  twofa_label_setup: Enable two-factor authentication
+  twofa_label_setup: 启用双因子验证
   twofa_label_deactivation_confirmation: Disable two-factor authentication
   twofa_notice_select: 'Please select the two-factor scheme you would like to use:'
   twofa_warning_require: The administrator requires you to enable two-factor authentication.
