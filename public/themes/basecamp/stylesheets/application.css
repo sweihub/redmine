@@ -41,6 +41,8 @@
 
   #header h1 {
     margin: 0 24px;
+    font-size: 24px;
+    font-weight: normal;
   }
 
   #header #quick-search {
@@ -103,10 +105,6 @@
     width: auto;
   }
 
-  #sidebar {
-    width: 21%;
-  }
-
   #footer {
     background-color: #EEEEEE;
     border: 0px;
@@ -136,14 +134,6 @@
     font-family: "Lucida Grande", arial, sans-serif;
   }
 
-  h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin: 0pt 0pt 0pt 0.25em;
-    padding: 0pt 0pt 10px;
-    text-align: left;
-  }
-
   h2,
   h3,
   h4,
@@ -151,20 +141,22 @@
   .wiki h2,
   .wiki h3 {
     border-bottom: 0px;
+    padding: unset;
+    margin: unset;
   }
 
-  h2,
-  .wiki h1 {
+
+  /* toolbar */
+  #content h2:nth-child(1),
+  #content h2:nth-child(2),
+  #content>div.wiki.wiki-page>h1:nth-child(2) {
     margin-bottom: 24px;
+    padding: unset;
   }
 
-  .wiki h1 {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-weight: bold;
-  }
-
-  .wiki h2 {
-    background-color: transparent;
+  /* agile */
+  #agile_live_search {
+    margin-top: -4px;
   }
 
   div.issue div.wiki h3 {
@@ -179,6 +171,11 @@
   .wiki h3,
   .wiki h4 {
     font-weight: bold;
+  }
+
+  /* sidebar */
+  #sidebar {
+    width: 21%;
   }
 
   #sidebar h3 {
@@ -539,11 +536,6 @@
     margin-top: -5px;
   }
 
-  /* agile */
-  #agile_live_search {
-    margin-top: -6px;
-  }
-
   /* issue */
   .issue .subject h3 {
     font-weight: bold;
@@ -554,13 +546,6 @@
   div.journal .contextual {
     padding-top: 8px;
     padding-right: 5px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    padding: unset;
   }
 
   .wiki h1,
@@ -581,7 +566,7 @@
 
   h4,
   .wiki h3 {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   /* smaller badge */
