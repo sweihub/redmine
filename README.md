@@ -9,6 +9,7 @@ plugin:
 - redmine_agile: more Chinese translations
 - redmine_gitlab_hook  
 - redmine_mermaid_macro
+- localizable
 
 roadmap:
 - custom sorting of versions, base on incrementing versions
