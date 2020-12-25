@@ -1,19 +1,25 @@
-# Redmine Enhanced
+# Redmine Enhanced (v4.x)
+
+Sunding Wei
+2020-12-25
 
 ## Added features
 
-issue template
-- see: ./plugins/redmine_mermaid_macro/assets/javascripts/issue-template.js 
+### Issue Template
+- see: [plugins/redmine_mermaid_macro/assets/javascripts/issue-template.js](plugins/redmine_mermaid_macro/assets/javascripts/issue-template.js)
 
-theme: 
+### Theme: 
 - basecamp: fix for redmine v4.x
 
-plugins: 
+### Plugins: 
 - redmine_agile: more Chinese translations
 - redmine_gitlab_hook  
 - redmine_mermaid_macro
 - localizable
 
-roadmap:
+### Roadmap:
 - custom sorting of versions, base on incrementing versions
 - custom sorting of issues, put closed issues to bottom
+
+### Screenshot:
+![](public/images/screenshot.png)
