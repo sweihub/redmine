@@ -1,0 +1,5 @@
+zh:
+  label_default_language: "默认语言"
+  label_default_language_note: "该语言不会被翻译，做为基准原样显示。"
+  label_locales_to_translate: "要翻译的语言"
+  field_name_in_english: "英文名"
