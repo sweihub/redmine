@@ -27,7 +27,6 @@ function checkTracker() {
 
 	// tracker changes
 	for (var i = 0; i < templates.length; i++) {
-		console.log("Debug " + edit.value);
 		if (edit.value == templates[i]) {
 			edit.value = "";
 			break;
