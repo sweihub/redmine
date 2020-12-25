@@ -2,10 +2,13 @@
 
 ## Added features
 
+issue template
+- see: ./plugins/redmine_mermaid_macro/assets/javascripts/issue-template.js 
+
 theme: 
 - basecamp: fix for redmine v4.x
 
-plugin: 
+plugins: 
 - redmine_agile: more Chinese translations
 - redmine_gitlab_hook  
 - redmine_mermaid_macro
