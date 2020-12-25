@@ -570,6 +570,11 @@
     font-variant: small-caps;
   }
 
+  /* preview */
+  .tabular .wiki-preview p {
+    padding-bottom: unset !important;
+  }
+
 }
 
 /* WIDE SCREEN END */
