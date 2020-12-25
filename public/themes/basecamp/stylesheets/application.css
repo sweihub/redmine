@@ -134,35 +134,17 @@
     font-family: "Lucida Grande", arial, sans-serif;
   }
 
-  h2,
-  h3,
-  h4,
-  .wiki h1,
-  .wiki h2,
-  .wiki h3 {
-    border-bottom: 0px;
-    padding: unset;
-    margin: unset;
-  }
-
-
-  /* toolbar */
-  #content h2:nth-child(1),
-  #content h2:nth-child(2),
+  /* banner */
+  #content>h2:nth-child(1),
+  #content>h2:nth-child(2),
+  #content>h2:nth-child(3),
+  .controller-agile_boards #content>form>h2,
   #content>div.wiki.wiki-page>h1:nth-child(2) {
     height: 36px;
     line-height: 36px;
     margin-top: -10px;
     margin-bottom: 14px;
     padding: unset;
-  }
-
-  /* reset the wiki h2 */
-  .wiki h2 {
-    margin: inherit !important;
-    line-height: inherit !important;
-    height: inherit !important;
-    padding: inherit !important;
   }
 
   #content p.subtitle {
@@ -202,13 +184,16 @@
     background-color: #EDF3FE;
     border-left: 3px solid #9FBFFA;
     padding: 10px;
+    border-bottom: 0px;
   }
 
+  /*
   div.splitcontentleft h2 {
     background-color: transparent;
     padding: 0;
     margin: 20px 0 5px 0;
   }
+  */
 
   /* Links */
   #sidebar a:hover {
@@ -563,12 +548,6 @@
     padding-right: 5px;
   }
 
-  .wiki h1,
-  .wiki h2,
-  .wiki h3 {
-    margin-left: 0px;
-  }
-
   h2,
   .wiki h1 {
     font-size: 16px;
@@ -594,3 +573,43 @@
 }
 
 /* WIDE SCREEN END */
+
+/* MOBILE BEGIN */
+@media screen and (max-width: 899px) {
+  #header {
+    height: 48px !important;
+  }
+
+  .mobile-toggle-button {
+    font-size: 32px !important;
+    line-height: 48px !important;
+    height: 48px !important;
+  }
+
+  #project-jump .drdn-trigger {
+    font-size: 16px !important;
+    line-height: 48px !important;
+    height: 48px !important;
+    padding: unset;
+  }
+
+  #project-jump.drdn {
+    padding: 0 0 0 20px !important;
+    height: unset !important;
+  }
+
+  body,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 12px !important;
+  }
+
+  .flyout-menu ul li a {
+    line-height: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* MOBILE END */
