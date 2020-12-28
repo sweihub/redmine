@@ -126,14 +126,6 @@
     color: #666666;
   }
 
-  /* Headers */
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Lucida Grande", arial, sans-serif;
-  }
-
   /* banner */
   #content>h2:nth-child(1),
   #content>h2:nth-child(2),
@@ -487,9 +479,7 @@
   }
 
   div.splitcontentleft ol li,
-  div.splitcontentleft ul li,
-  div.wiki ol li,
-  div.wiki ul li {
+  div.splitcontentleft ul li {
     padding: 4px 0;
   }
 
@@ -548,19 +538,52 @@
     padding-right: 5px;
   }
 
+  /* headers */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lucida Grande", arial, sans-serif;
+  }
+
   h2,
   .wiki h1 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   h3,
   .wiki h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   h4,
   .wiki h3 {
+    font-size: 14px;
+  }
+
+  .wiki h4 {
     font-size: 13px;
+  }
+
+  .wiki h1,
+  .wiki h2,
+  .wiki h3,
+  .wiki h4,
+  .wiki h5,
+  .wiki h6 {
+    margin: 18px 0 12px 0;
+    padding: 0px;
+    font-weight: 600;
+    line-height: 1.25;
+    border-bottom: unset;
+  }
+
+  .wiki h1,
+  .wiki h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eaecef;
   }
 
   /* smaller badge */
@@ -570,11 +593,14 @@
     font-variant: small-caps;
   }
 
-  /* preview */
   .tabular .wiki-preview p {
+    padding-top: unset !important;
     padding-bottom: unset !important;
   }
 
+  .tabular p {
+    margin: 12px 0;
+  }
 }
 
 /* WIDE SCREEN END */
