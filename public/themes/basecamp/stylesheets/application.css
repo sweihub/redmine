@@ -498,6 +498,12 @@
     list-style-type: lower-roman;
   }
 
+  .pages-hierarchy,
+  .wiki ol,
+  .wiki ul {
+    padding-left: 16px;
+  }
+
   /* color: #edf3fe, RGB(237, 243, 254) */
   #content {
     background-image: url(../images/bg.png);
