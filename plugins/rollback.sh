@@ -1,6 +1,7 @@
 #!/bin/bash
+# Rollback the plugin database change
 
-array=($(ls -1d plugins/*/ | sed -rn "s|plugins/([^/]+)/|\1|p"))
+array=($(ls -1d */ | sed 's|/$||'))
 
 i=0
 for T in ${array[@]}; do
