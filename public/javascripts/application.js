@@ -1,13 +1,6 @@
 /* Redmine - project management software
    Copyright (C) 2006-2020  Jean-Philippe Lang */
 
-/* Fix for CVE-2015-9251, to be removed with JQuery >= 3.0 */
-$.ajaxPrefilter(function (s) {
-  if (s.crossDomain) {
-    s.contents.script = false;
-  }
-});
-
 function checkAll(id, checked) {
   $('#'+id).find('input[type=checkbox]:enabled').prop('checked', checked);
 }
@@ -614,6 +607,46 @@ function observeAutocompleteField(fieldId, url, options) {
       response: function(){$('#'+fieldId).removeClass('ajax-loading');}
     }, options));
     $('#'+fieldId).addClass('autocomplete');
+  });
+}
+
+function multipleAutocompleteField(fieldId, url, options) {
+  function split(val) {
+    return val.split(/,\s*/);
+  }
+
+  function extractLast(term) {
+    return split(term).pop();
+  }
+
+  $(document).ready(function () {
+    $('#' + fieldId).autocomplete($.extend({
+      source: function (request, response) {
+        $.getJSON(url, {
+          term: extractLast(request.term)
+        }, response);
+      },
+      minLength: 2,
+      position: {collision: "flipfit"},
+      search: function () {
+        $('#' + fieldId).addClass('ajax-loading');
+      },
+      response: function () {
+        $('#' + fieldId).removeClass('ajax-loading');
+      },
+      select: function (event, ui) {
+        var terms = split(this.value);
+        // remove the current input
+        terms.pop();
+        // add the selected item
+        terms.push(ui.item.value);
+        // add placeholder to get the comma-and-space at the end
+        terms.push("");
+        this.value = terms.join(", ");
+        return false;
+      }
+    }, options));
+    $('#' + fieldId).addClass('autocomplete');
   });
 }
 
