@@ -454,6 +454,14 @@
     font-size: 125%;
   }
 
+  #relations input[type=submit] {
+    background-color: #eeeeee;
+  }
+
+  #relations input[type=submit]:hover {
+    background-color: #ddd;
+  }
+
   option {
     border-bottom: 1px dotted #d7d7d7;
   }
@@ -621,6 +629,12 @@
   div.wiki td,
   div.wiki th {
     padding: 5px;
+  }
+
+  #roadmap > article > header, 
+  #roadmap > article > div.contextual:nth-child(1) {
+    height: 32px;
+    line-height: 32px;
   }
 }
 
