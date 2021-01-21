@@ -261,6 +261,31 @@
     color: #333;
   }
 
+  /* issue in-progress */
+  a.issue.status-2 {
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+  }
+
+  /* issue done */
+  a.issue.status-3 {
+     font-style: italic; 
+     background: #1d1a1a26; 
+  }
+
+  /* issue closed */
+  a.issue.closed {
+    font-style: italic;
+  }
+
+  /* issue priorities */
+  #roadmap a.issue.priority-3,
+  #roadmap a.issue.priority-4,
+  #roadmap a.issue.priority-5 {
+    border: 1px solid #205D86;
+    border-radius: 2px;
+  }
+
   /* adjust the css according to your priority ids, for Redmine 2.1 */
   tr.odd.priority-8,
   table.list tbody tr.odd.priority-8:hover {
