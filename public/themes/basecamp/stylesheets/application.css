@@ -544,6 +544,20 @@
     background-position: 0px 0px;
   }
 
+  /* fix tabs issue */
+  #content .tabs {
+    margin-bottom: 0;
+  }
+
+  #history .tab-content {
+    padding-top: 0.7em;
+    line-height: 135%;
+  }
+
+  #content .wiki {
+    line-height: 135%;
+  }
+
   .contextual {
     margin: unset;
   }
