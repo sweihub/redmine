@@ -278,14 +278,6 @@
     font-style: italic;
   }
 
-  /* issue priorities */
-  #roadmap a.issue.priority-3,
-  #roadmap a.issue.priority-4,
-  #roadmap a.issue.priority-5 {
-    border: 1px solid #205D86;
-    border-radius: 2px;
-  }
-
   /* adjust the css according to your priority ids, for Redmine 2.1 */
   tr.odd.priority-8,
   table.list tbody tr.odd.priority-8:hover {
