@@ -554,6 +554,11 @@
     margin: unset;
   }
 
+  /* new issue */
+  .action-new #main {
+    max-width: 1436px;
+  }
+
   /* my page */
   .controller-my #content .contextual {
     margin-top: -5px;
