@@ -1291,6 +1291,12 @@ zh:
   field_toolbar_language_options: 代码工具栏语言突出显示
   label_user_mail_notify_about_high_priority_issues_html: 请通知我优先级高于<em>%{prio}</em>的问题
   label_assign_to_me: 指派给我
+  label_orfilter: "逻辑过滤器"
+  label_orfilter_and_any: "并且（以下任意）"
+  label_orfilter_or_any: "或者（以下任意）"
+  label_orfilter_or_all: "或者（以下全部）"
+  label_match: "匹配"
+  label_not_match: "不匹配"
   notice_issue_not_closable_by_open_tasks: 此问题无法被关闭，因为它至少还有一个尚在打开的子任务。
   notice_issue_not_closable_by_blocking_issue: 此问题无法被关闭，因为它被至少一个尚在打开的问题所阻挡。
   notice_issue_not_reopenable_by_closed_parent_issue: 此问题無法被重开，因为它的父任务已关闭。

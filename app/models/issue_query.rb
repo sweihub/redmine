@@ -239,12 +239,28 @@ class IssueQuery < Query
         :values => lambda {all_projects_values}
       )
     end
+    
     add_available_filter "parent_id", :type => :tree, :label => :field_parent_issue
     add_available_filter "child_id", :type => :tree, :label => :label_subtask_plural
-
     add_available_filter "issue_id", :type => :integer, :label => :label_issue
+    
+    add_available_filter "and_any",
+        :name => l(:label_orfilter_and_any),
+        :type => :list,
+        :values => [l(:general_text_Yes)],
+        :group => 'or_filter'
+    add_available_filter "or_any",
+        :name => l(:label_orfilter_or_any),
+        :type => :list,
+        :values => [l(:general_text_Yes)],
+        :group => 'or_filter'
+    add_available_filter "or_all",
+        :name => l(:label_orfilter_or_all),
+        :type => :list,
+        :values => [l(:general_text_Yes)],
+        :group => 'or_filter'
 
-    Tracker.disabled_core_fields(trackers).each do |field|
+      Tracker.disabled_core_fields(trackers).each do |field|
       delete_available_filter field
     end
   end
