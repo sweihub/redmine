@@ -536,8 +536,8 @@
     background-position: 0px 0px;
   }
 
-  /* fix tabs issue */
-  #content .tabs {
+  /* issue tabs without bottom margin */
+  .controller-issues #content .tabs {
     margin-bottom: 0;
   }
 
@@ -554,8 +554,15 @@
     margin: unset;
   }
 
+  .controller-repositories .details h4 {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+
   /* new issue */
-  .action-new #main {
+  .action-new #main,
+  .controller-repositories.action-revision #main,
+  .controller-projects.action-settings #main {
     max-width: 1436px;
   }
 
