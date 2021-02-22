@@ -582,8 +582,16 @@
   }
 
   /* repository */
-  .controller-repositories #content .contextual {
-    margin-top: -5px;
+  .controller-repositories #content > div.contextual {
+    margin-top: -7px;
+  }
+
+  #related-issues > h3 {
+    background: aliceblue;
+  }
+
+  #related-issues > div {
+    margin-top: 3px;
   }
 
   /* issue */
