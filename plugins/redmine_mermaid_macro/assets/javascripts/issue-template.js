@@ -18,11 +18,11 @@ function checkTracker() {
 		// 1: task
 		"",
 		// 2: bug
-		"***Expect:***\nsuccess\n\n***Result***:\nfailure\n\n***Reproduce:***\n1. \n2. \n3. \n\n***Output:***\n```\noutput or logs here\n```",
+		"",
 		// 3: 需求
 		"作为 < 角色 >， 我想要 < 功能 >， 以便于 < 商业价值 >。",
 		// 4. 缺陷
-		"***期待：***\n成功\n\n***结果：***\n失败\n\n***重现：***\n1. \n2. \n3. \n\n***输出：***\n```\n输出或日志...\n```"
+		""
 	];
 
 	// tracker changes
