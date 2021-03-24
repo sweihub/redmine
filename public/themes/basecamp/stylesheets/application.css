@@ -10,6 +10,67 @@
 
 @import url(../../../stylesheets/application.css);
 
+/* avatar begin */
+body.avatars-on div.journal {
+    padding-left: unset;
+}
+
+div.journal h4 img.gravatar {
+    margin-left: -5px;
+    margin-top: -6px;
+    width: 24px;
+    height: 24px;
+}
+
+#activity dt img.gravatar {
+	width: 24px;
+	height: 24px;
+}
+
+#watchers img.gravatar,
+#roadmap img.gravatar,
+#sidebar img.gravatar {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+div.gravatar-with-child > img.gravatar:nth-child(2) {
+    width: 22px;
+    height: 22px;
+}
+
+div.gravatar-with-child > img.gravatar:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+
+.agile-board img.gravatar {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+.gantt_subjects .issue-subject img.icon-gravatar {
+    width: 14px;
+    height: 14px;
+    margin: 1px 5px 1px 2px;
+    vertical-align: text-bottom;
+}
+
+#gantt_area .tip img.gravatar {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/* user profile */
+.controller-users.action-show.avatars-on h2 > img.gravatar {
+    width: 50px;
+    height: 50px;
+}
+/* avatar end */
+
 /* WIDE SCREEN BEGIN */
 @media screen and (min-width: 900px) {
 
