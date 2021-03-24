@@ -298,7 +298,7 @@
   warning_attachments_not_saved: "%{count} 個附加檔案無法被儲存。"
   error_password_expired: "您的密碼已經過期或是管理員要求您變更密碼."
   error_invalid_file_encoding: "這個檔案不是一個有效的 %{encoding} 編碼檔案"
-  error_invalid_csv_file_or_settings: "這個檔案不是一個 CSV 檔案，或是未符合下面所列之設定值"
+  error_invalid_csv_file_or_settings: "這個檔案不是一個 CSV 檔案，或是未符合下面所列之設定值 (%{value})"
   error_can_not_read_import_file: "讀取匯入檔案時發生錯誤"
   error_attachment_extension_not_allowed: "附件之附檔名不允許使用 %{extension}"
   error_ldap_bind_credentials: "無效的 LDAP 帳號/密碼"
@@ -1176,7 +1176,6 @@
 
   text_select_mail_notifications: 選擇欲寄送提醒通知郵件之動作
   text_regexp_info: eg. ^[A-Z0-9]+$
-  text_min_max_length_info: 0 代表「不限制」
   text_project_destroy_confirmation: 您確定要刪除這個專案和其他相關資料？
   text_subprojects_destroy_warning: "下列子專案： %{value} 將一併被刪除。"
   text_workflow_edit: 選擇角色與追蹤標籤以設定其工作流程
@@ -1435,3 +1434,9 @@
   text_project_destroy_enter_identifier: 若要確認, 請在下面輸入專案的代碼 (%{identifier}).
   button_add_subtask: 新增子任務
   notice_invalid_watcher: '無效的監看員: 監看用戶將無法收到任何通知, 因為該用戶沒有檢視此物件的存取權限.'
+  button_fetch_changesets: 擷取認可
+  permission_view_message_watchers: 檢視訊息監看員清單
+  permission_add_message_watchers: 新增訊息監看員
+  permission_delete_message_watchers: 刪除訊息監看員
+  label_message_watchers: 監看員
+  button_copy_link: 複製連結

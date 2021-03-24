@@ -347,7 +347,7 @@ class AgileQuery < Query
   end
 
   def groupable_columns
-    available_columns.select { |c| c.groupable && !c.is_a?(QueryCustomFieldColumn) }
+    available_columns.select { |c| c.groupable? && !c.is_a?(QueryCustomFieldColumn) }
   end
 
   def sql_for_issue_id_field(field, operator, value)
