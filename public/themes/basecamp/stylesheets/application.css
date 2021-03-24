@@ -17,6 +17,11 @@
     margin-bottom: -2px;
 }
 
+#users_for_watcher img.gravatar {
+    width: 16px;
+    height: 16px;
+}
+
 body.avatars-on div.journal {
     padding-left: unset;
 }
