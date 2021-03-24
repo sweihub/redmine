@@ -11,6 +11,12 @@
 @import url(../../../stylesheets/application.css);
 
 /* avatar begin */
+.details img.gravatar {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -2px;
+}
+
 body.avatars-on div.journal {
     padding-left: unset;
 }
