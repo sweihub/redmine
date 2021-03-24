@@ -80,7 +80,13 @@ div.gravatar-with-child > img.gravatar:nth-child(1) {
     width: 50px;
     height: 50px;
 }
+
 /* avatar end */
+
+tr.member td.icon-user,
+tr.member td.icon-group {
+    padding-left: 20px;
+}
 
 /* WIDE SCREEN BEGIN */
 @media screen and (min-width: 900px) {
