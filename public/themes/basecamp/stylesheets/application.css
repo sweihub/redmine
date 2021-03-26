@@ -112,6 +112,10 @@ tr.member td.icon-group {
   line-height: 135%;
 }
 
+.project-members .assignable-user {
+    line-height: 18px;
+}
+
 /* WIDE SCREEN BEGIN */
 @media screen and (min-width: 900px) {
 
