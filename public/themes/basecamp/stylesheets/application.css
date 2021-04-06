@@ -23,9 +23,12 @@ table.list.users .username img.gravatar {
   margin-bottom: -2px;
 }
 
+#principals img.gravatar, 
 #users_for_watcher img.gravatar {
   width: 16px;
   height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 
 body.avatars-on div.journal {
@@ -48,7 +51,7 @@ div.journal h4 img.gravatar {
 #sidebar img.gravatar {
   width: 16px;
   height: 16px;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 div.gravatar-with-child>img.gravatar:nth-child(2) {
