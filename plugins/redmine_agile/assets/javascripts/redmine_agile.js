@@ -2,6 +2,12 @@
   // var AgileBoard = function() {};
   var PlanningBoard = function() {};
 
+  // fix chrome font rendering issue
+  // https://stackoverflow.com/a/22858694/2258077
+  $(document).ready(function () { 
+    $('head').append('<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet" />'); }
+   );
+
   PlanningBoard.prototype = {
 
     init: function(routes) {

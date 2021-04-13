@@ -106,12 +106,15 @@ table.gantt-table img.gravatar {
     color: #777;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* 
+ * Chrome rendering issue, moved to redmine_agile.js
+ * @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+ */
 
 .issue-card p.name {
+    font-size: 16px;
+    font-family: 'Kalam';
     font-weight: 400 !important;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
 }
 
 tr.member td.icon-user,
