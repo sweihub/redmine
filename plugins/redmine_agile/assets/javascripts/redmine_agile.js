@@ -226,11 +226,13 @@
             success: function(data, status, xhr) {
               self.successSortable(oldStatusId, newStatusId, oldSwimLaneId, swimLaneId);
               $($item).replaceWith(data);
+              /*
               estimatedHours = $($item).find("span.hours");
               if(estimatedHours.size() > 0){
                 hours = $(estimatedHours).html().replace(/(\(|\)|h)?/g, '');
                 // self.recalculateEstimateHours(oldStatusId, newStatusId, hours);
               }
+              */
             },
             error: function(xhr, status, error) {
               self.errorSortable($oldColumn, xhr.responseText);
