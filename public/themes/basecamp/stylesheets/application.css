@@ -778,7 +778,7 @@ tr.member td.icon-group {
   .wiki h1,
   .wiki h2 {
     padding-bottom: 5px;
-    border-bottom: 1px solid #eaecef;
+    /* border-bottom: 1px solid #eaecef; */
   }
 
   /* smaller badge */
