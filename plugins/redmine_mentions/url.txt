@@ -1,0 +1,1 @@
+https://github.com/arkhitech/redmine_mentions.git
