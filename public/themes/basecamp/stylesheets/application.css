@@ -698,11 +698,6 @@ tr.member td.icon-group {
     margin-top: -5px;
   }
 
-  /* overview */
-  .controller-projects #content .splitcontent {
-    margin-top: -16px;
-  }
-
   /* gantt */
   .controller-gantts #sidebar {
     max-width: 150px;
@@ -780,7 +775,7 @@ tr.member td.icon-group {
     padding-bottom: 5px;
   }
 
-  .controller-wiki .wiki h1 {
+  .controller-wiki .wiki h1:not(:nth-child(2)) {
     border-bottom: 1px solid #eaecef; 
   }
 
@@ -788,7 +783,6 @@ tr.member td.icon-group {
       margin-bottom: -12px;
   }
 
-  .wiki h1:hover,
   .wiki h2:hover,
   .wiki h3:hover {
     border-bottom: 1px solid #eaecef;
