@@ -778,7 +778,20 @@ tr.member td.icon-group {
   .wiki h1,
   .wiki h2 {
     padding-bottom: 5px;
-    /* border-bottom: 1px solid #eaecef; */
+  }
+
+  .controller-wiki .wiki h1 {
+    border-bottom: 1px solid #eaecef; 
+  }
+
+  .controller-wiki .wiki .icon-edit {
+      margin-bottom: -12px;
+  }
+
+  .wiki h1:hover,
+  .wiki h2:hover,
+  .wiki h3:hover {
+    border-bottom: 1px solid #eaecef;
   }
 
   /* smaller badge */
