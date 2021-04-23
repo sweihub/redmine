@@ -24,7 +24,7 @@ class AttachmentsController < ApplicationController
   before_action :find_container, :only => [:edit_all, :update_all, :download_all]
   before_action :find_downloadable_attachments, :only => :download_all
   before_action :find_editable_attachments, :only => [:edit_all, :update_all]
-  before_action :file_readable, :read_authorize, :only => [:show, :download, :thumbnail]
+  before_action :file_readable, :read_authorize, :only => [:show, :thumbnail]
   before_action :update_authorize, :only => :update
   before_action :delete_authorize, :only => :destroy
   before_action :authorize_global, :only => :upload
@@ -32,6 +32,9 @@ class AttachmentsController < ApplicationController
   # Disable check for same origin requests for JS files, i.e. attachments with
   # MIME type text/javascript.
   skip_after_action :verify_same_origin_request, :only => :download
+
+  # INSECURE: download attachments without login, fix for showing images in email
+  skip_before_action :check_if_login_required, :only => :download
 
   accept_api_auth :show, :download, :thumbnail, :upload, :update, :destroy
 
