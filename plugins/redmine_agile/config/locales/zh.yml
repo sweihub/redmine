@@ -31,7 +31,7 @@ zh:
   label_agile_charts_issues_velocity: 速度
   label_agile_charts_lead_time: 交付周期
   label_agile_charts_average_lead_time: 平均交付周期
-  label_agile_chart_plural: 敏捷图标
+  label_agile_chart_plural: 敏捷图表
   label_agile_chart_burndown: 燃尽图
   label_agile_chart_units: 单位
   label_agile_interval_size: 间隔
@@ -41,7 +41,7 @@ zh:
   label_agile_quarter: 季
   label_agile_year: 年
   label_cards_search: 按标题检索
-  permission_view_agile_charts: 浏览敏捷图标
+  permission_view_agile_charts: 浏览敏捷图表
   label_agile_ideal_work_remaining: 理想
   label_agile_actual_work_remaining: 实际
   label_agile_chart: 图表
