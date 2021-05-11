@@ -46,7 +46,7 @@
 
 <div class="attributes">
 <%= issue_fields_rows do |rows|
-  rows.left l(:field_status), @issue.status.name, :class => 'status'
+  rows.left l(:field_status), form_and_issue_status_select_tag(@issue, @allowed_statuses), :class => 'status'
   rows.left l(:field_priority), @issue.priority.name, :class => 'priority'
 
   unless @issue.disabled_core_fields.include?('assigned_to_id')

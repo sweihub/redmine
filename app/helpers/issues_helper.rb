@@ -753,4 +753,15 @@ module IssuesHelper
       issue.allowed_target_projects(User.current)
     end
   end
+
+  def form_and_issue_status_select_tag(issue, allowed_statuses)
+    if issue.safe_attribute?('status_id') && allowed_statuses.present?
+      form_for(issue, id: 'quickly-select-issue-status-form') do |f|
+        f.select(:status_id, options_for_select(allowed_statuses.map{|p| [p.name, p.id]}, issue.status.id), {},
+                 {onchange: 'this.form.submit(); return false;', class: issue.closed? ? 'selected-status-closed' : 'selected-status-open', id: 'quickly-select-issue-status'})
+      end
+    else
+      issue.status.name
+    end
+  end
 end

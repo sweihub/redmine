@@ -147,6 +147,13 @@ tr.member td.icon-group {
     line-height: 18px;
 }
 
+#quickly-select-issue-status {
+    border: 0px;
+    margin-left: -7px;
+    margin-top: -4px;
+    background-color: transparent;
+}
+
 /* WIDE SCREEN BEGIN */
 @media screen and (min-width: 900px) {
 
