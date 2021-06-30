@@ -10,6 +10,9 @@ function checkTracker() {
 
 	var tracker = target.options[target.selectedIndex].text.toLowerCase();
 	var edit = document.querySelector("#issue_description");
+    var wrapper = document.querySelector("div.jstEditor > div.textoverlay-wrapper");
+
+    wrapper.style.width = "100%";
 
 	// issue templates
 	var templates = [
@@ -53,11 +56,11 @@ function checkTracker() {
 	}
 }
 
-// tracker changes
 checkTracker();
-var container = document.getElementById('all_attributes');
-if (container) {
-	container.addEventListener('DOMNodeInserted', function (event) {
-		checkTracker();
-	}, false);
-}
+
+// tracker changes
+document.addEventListener('change', (event) => {
+    // mimic document rendered event
+    setTimeout(checkTracker, 0);
+});
+
