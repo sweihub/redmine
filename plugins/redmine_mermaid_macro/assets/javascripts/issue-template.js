@@ -66,18 +66,32 @@ document.addEventListener('change', (event) => {
 
 // subject emoji replacement
 // https://fsymbols.com/signs/arrow/
-function emoji() {
-    var s = document.querySelectorAll(".subject");
+
+function replaceArrow(s) {
     for (var i = 0; i < s.length; i++) {
         var t = s[i].innerHTML;
+        // scope syntax: [ a --> b --> c ]
+        t = t.replace(/\[([^\]]+)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
         t = t.replaceAll(/\s*--&gt;\s*/g, " 🡪 ");
         t = t.replaceAll(/\s*--\s*/g, " ➟ ");
         t = t.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
-        // scope syntax: [ a --> b --> c ]
-        t = t.replace(/\[(.*)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
         s[i].innerHTML = t;
     }
 }
 
-setTimeout(emoji, 0);
+function onRendered() {
+    var s = document.querySelectorAll(".subject");
+    replaceArrow(s);
+
+    s = document.querySelectorAll(".issue-subject");
+    replaceArrow(s);
+
+    s = document.querySelectorAll(".issue-card .name");
+    replaceArrow(s);
+
+    s = document.querySelectorAll("#activity .icon a");
+    replaceArrow(s);
+}
+
+setTimeout(onRendered, 0);
 
