@@ -69,11 +69,13 @@ document.addEventListener('change', (event) => {
 function emoji() {
     var s = document.querySelectorAll(".subject");
     for (var i = 0; i < s.length; i++) {
-        s[i].innerHTML = s[i].innerHTML.replaceAll("--&gt;", "🡪");
-        s[i].innerHTML = s[i].innerHTML.replaceAll(/\s*--\s*/g, " ➟ ");
-        s[i].innerHTML = s[i].innerHTML.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
+        var t = s[i].innerHTML;
+        t = t.replaceAll("--&gt;", "🡪");
+        t = t.replaceAll(/\s*--\s*/g, " ➟ ");
+        t = t.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
         // scope syntax: [ a --> b --> c ]
-        s[i].innerHTML = s[i].innerHTML.replace(/\[(.*)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
+        t = t.replace(/\[(.*)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
+        s[i].innerHTML = t;
     }
 }
 
