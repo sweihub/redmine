@@ -70,9 +70,10 @@ function emoji() {
     var s = document.querySelectorAll(".subject");
     for (var i = 0; i < s.length; i++) {
         s[i].innerHTML = s[i].innerHTML.replaceAll("--&gt;", "🡪");
+        s[i].innerHTML = s[i].innerHTML.replaceAll("--",     "➟");
+        s[i].innerHTML = s[i].innerHTML.replaceAll("&gt;",   "⮞");
     }
 }
 
 setTimeout(emoji, 0);
-
 
