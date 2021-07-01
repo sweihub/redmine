@@ -154,6 +154,10 @@ tr.member td.icon-group {
     background-color: transparent;
 }
 
+div.jstEditor > div.textoverlay-wrapper {
+    width: 100%;
+}
+
 /* WIDE SCREEN BEGIN */
 @media screen and (min-width: 900px) {
 

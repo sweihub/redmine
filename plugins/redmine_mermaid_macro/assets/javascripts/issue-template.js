@@ -10,9 +10,6 @@ function checkTracker() {
 
 	var tracker = target.options[target.selectedIndex].text.toLowerCase();
 	var edit = document.querySelector("#issue_description");
-    var wrapper = document.querySelector("div.jstEditor > div.textoverlay-wrapper");
-
-    wrapper.style.width = "100%";
 
 	// issue templates
 	var templates = [
@@ -21,7 +18,7 @@ function checkTracker() {
 		// 1: task
 		"",
 		// 2: bug
-		"",
+		"*Description:*\n\n*Steps:*\n\n*Result:*\n\n*Suggestion:*\n\n",
 		// 3: 需求
 		"作为 < 角色 >， 我想要 < 功能 >， 以便于 < 商业价值 >。",
 		// 4. 缺陷
