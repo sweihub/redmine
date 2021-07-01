@@ -70,7 +70,7 @@ function emoji() {
     var s = document.querySelectorAll(".subject");
     for (var i = 0; i < s.length; i++) {
         var t = s[i].innerHTML;
-        t = t.replaceAll("--&gt;", "🡪");
+        t = t.replaceAll(/\s*--&gt;\s*/g, " 🡪 ");
         t = t.replaceAll(/\s*--\s*/g, " ➟ ");
         t = t.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
         // scope syntax: [ a --> b --> c ]
