@@ -64,3 +64,15 @@ document.addEventListener('change', (event) => {
     setTimeout(checkTracker, 0);
 });
 
+// subject emoji replacement
+// https://fsymbols.com/signs/arrow/
+function emoji() {
+    var s = document.querySelectorAll(".subject");
+    for (var i = 0; i < s.length; i++) {
+        s[i].innerHTML = s[i].innerHTML.replaceAll("--&gt;", "🡪");
+    }
+}
+
+setTimeout(emoji, 0);
+
+
