@@ -70,8 +70,10 @@ function emoji() {
     var s = document.querySelectorAll(".subject");
     for (var i = 0; i < s.length; i++) {
         s[i].innerHTML = s[i].innerHTML.replaceAll("--&gt;", "🡪");
-        s[i].innerHTML = s[i].innerHTML.replaceAll("--",     "➟");
-        s[i].innerHTML = s[i].innerHTML.replaceAll("&gt;",   "⮞");
+        s[i].innerHTML = s[i].innerHTML.replaceAll(/\s*--\s*/g, " ➟ ");
+        s[i].innerHTML = s[i].innerHTML.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
+        // scope syntax: [ a --> b --> c ]
+        s[i].innerHTML = s[i].innerHTML.replace(/\[(.*)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
     }
 }
 
