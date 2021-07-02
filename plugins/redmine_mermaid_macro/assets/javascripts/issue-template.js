@@ -15,14 +15,12 @@ function checkTracker() {
 	var templates = [
 		// 0: user story
 		"As a < role >, I want < some goals >, so that < some reasons >.",
-		// 1: task
-		"",
-		// 2: bug
-		"*Description:*\n\n*Steps:*\n\n*Result:*\n\n*Suggestion:*\n\n",
-		// 3: 需求
+		// 1: bug
+		"*Description:*\n\n\n*Steps:*\n\n\n*Result:*\n\n\n*Suggestion:*\n",
+		// 2: 需求
 		"作为 < 角色 >， 我想要 < 功能 >， 以便于 < 商业价值 >。",
-		// 4. 缺陷
-		""
+		// 3. 漏洞
+		"*描述:*\n\n\n*步骤:*\n\n\n*结果:*\n\n\n*建议:*\n"
 	];
 
 	// tracker changes
@@ -39,17 +37,14 @@ function checkTracker() {
 		if (tracker == "user story")
 			edit.value = templates[0]
 
-		if (tracker == "task")
+		if (tracker == "bug")
 			edit.value = templates[1];
 
-		if (tracker == "bug")
+		if (tracker == "需求" || tracker == "用户故事")
 			edit.value = templates[2];
 
-		if (tracker == "需求" || tracker == "用户故事")
+		if (tracker == "漏洞")
 			edit.value = templates[3];
-
-		if (tracker == "缺陷")
-			edit.value = templates[4];
 	}
 }
 
