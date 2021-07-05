@@ -16,11 +16,11 @@ function checkTracker() {
 		// 0: user story
 		"As a < role >, I want < some goals >, so that < some reasons >.",
 		// 1: bug
-		"*Description:*\n\n\n*Steps:*\n\n\n*Result:*\n\n\n*Suggestion:*\n",
+		"\n\n*Steps:*\n\n\n*Result:*\n\n\n*Suggestion:*\n",
 		// 2: 需求
 		"作为 < 角色 >， 我想要 < 功能 >， 以便于 < 商业价值 >。",
 		// 3. 漏洞
-		"*描述:*\n\n\n*步骤:*\n\n\n*结果:*\n\n\n*建议:*\n"
+		"\n\n*步骤:*\n\n\n*结果:*\n\n\n*建议:*\n"
 	];
 
 	// tracker changes
@@ -59,30 +59,47 @@ document.addEventListener('change', (event) => {
 // subject emoji replacement
 // https://fsymbols.com/signs/arrow/
 
-function replaceArrow(s) {
+function getArrow(t) {
+    // scope syntax: [ a --> b --> c ]
+    t = t.replace(/\[([^\]]+)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
+    t = t.replaceAll(/\s*--&gt;\s*/g, " 🡪 ");
+    t = t.replaceAll(/\s*--\s*/g, " ➟ ");
+    t = t.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
+    return t;
+}
+
+function setArrows(s) {
     for (var i = 0; i < s.length; i++) {
         var t = s[i].innerHTML;
-        // scope syntax: [ a --> b --> c ]
-        t = t.replace(/\[([^\]]+)\]/g, "[<font color='#00008B'><i>$1</i></font>]");
-        t = t.replaceAll(/\s*--&gt;\s*/g, " 🡪 ");
-        t = t.replaceAll(/\s*--\s*/g, " ➟ ");
-        t = t.replaceAll(/\s*&gt;\s*/g, " ⮞ ");
-        s[i].innerHTML = t;
+        s[i].innerHTML = getArrow(t);
     }
 }
 
 function onRendered() {
     var s = document.querySelectorAll(".subject");
-    replaceArrow(s);
+    setArrows(s);
+
+    s = document.querySelectorAll(".time-entry td.issue");
+    setArrows(s);
 
     s = document.querySelectorAll(".issue-subject");
-    replaceArrow(s);
+    setArrows(s);
 
     s = document.querySelectorAll(".issue-card .name");
-    replaceArrow(s);
+    setArrows(s);
 
     s = document.querySelectorAll("#activity .icon a");
-    replaceArrow(s);
+    setArrows(s);
+
+    // issue with scoped syntax: [a -- b -- c]
+    var sections = document.querySelectorAll(".issue .wiki");
+    for (var i = 0; i < sections.length; i++) {
+        var scopes = sections[i].innerHTML.match(/\[[^\]]*(--|>)+[^\]]*\]/g);
+        for (var n = 0; n < scopes.length; n++) {
+            var arrow = getArrow(scopes[n]);
+            sections[i].innerHTML = sections[i].innerHTML.replaceAll(scopes[n], arrow);
+        }
+    }
 }
 
 setTimeout(onRendered, 0);
