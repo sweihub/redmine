@@ -77,7 +77,7 @@ function setArrows(s) {
 
 function addPriorityIcons() {
 	var rows = document.querySelectorAll("#roadmap tr.hascontextmenu.issue")
-	var colors = ["blue", "orange", "red"];
+	var colors = ["orange", "red", "black"];
 
 	for (var i = 0; i < rows.length; i++) {
 		var row = rows[i];
@@ -98,7 +98,7 @@ function addPriorityIcons() {
 			icon.color = colors[p];
 			icon.style.position = "absolute";
 			icon.size = 4;
-			icon.style.top = (rect.y + (row.offsetHeight - icon.offsetHeight) / 2) + "px";
+			icon.style.top = (rect.y + (row.offsetHeight - icon.offsetHeight) / 2 - 2) + "px";
 			icon.style.left = (rect.x - icon.offsetWidth) + "px";
 		}
 	}
