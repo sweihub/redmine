@@ -75,6 +75,35 @@ function setArrows(s) {
     }
 }
 
+function addPriorityIcons() {
+	var rows = document.querySelectorAll("#roadmap tr.hascontextmenu.issue")
+	var colors = ["blue", "orange", "red"];
+
+	for (var i = 0; i < rows.length; i++) {
+		var row = rows[i];
+		var p = -1;
+
+		if (row.className.indexOf("priority-3") > -1)
+			p = 0;
+		else if (row.className.indexOf("priority-4") > -1)
+			p = 1;
+		else if (row.className.indexOf("priority-5") > -1)
+			p = 2;
+
+		if ((p > -1) && (row.className.indexOf("closed") == -1)) {
+			var rect = row.getBoundingClientRect();
+			var icon = document.createElement("font");
+			document.body.firstElementChild.appendChild(icon);
+			icon.innerHTML = "●";
+			icon.color = colors[p];
+			icon.style.position = "absolute";
+			icon.size = 4;
+			icon.style.top = (rect.y + (row.offsetHeight - icon.offsetHeight) / 2) + "px";
+			icon.style.left = (rect.x - icon.offsetWidth) + "px";
+		}
+	}
+}
+
 function onRendered() {
     var s = document.querySelectorAll(".subject");
     setArrows(s);
@@ -100,6 +129,8 @@ function onRendered() {
             sections[i].innerHTML = sections[i].innerHTML.replaceAll(scopes[n], arrow);
         }
     }
+
+	addPriorityIcons();
 }
 
 setTimeout(onRendered, 0);
