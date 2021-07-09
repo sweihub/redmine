@@ -75,7 +75,7 @@ function setArrows(s) {
     }
 }
 
-function addPriorityIcons() {
+function setPriorityIcons() {
 	var rows = document.querySelectorAll("#roadmap tr.hascontextmenu.issue")
 	var colors = ["orange", "red", "black"];
 
@@ -91,17 +91,92 @@ function addPriorityIcons() {
 			p = 2;
 
 		if ((p > -1) && (row.className.indexOf("closed") == -1)) {
-			var rect = row.getBoundingClientRect();
-			var icon = document.createElement("font");
-			document.body.firstElementChild.appendChild(icon);
-			icon.innerHTML = "●";
-			icon.color = colors[p];
-			icon.style.position = "absolute";
-			icon.size = 4;
-			icon.style.top = (rect.y + (row.offsetHeight - icon.offsetHeight) / 2 - 2) + "px";
-			icon.style.left = (rect.x - icon.offsetWidth) + "px";
+			let rect = row.getBoundingClientRect();
+			let icon = null;
+            let id = "dot" + i;
+
+            if (row.getAttribute("dot") == null) {
+                row.setAttribute("dot", id);
+                icon = document.createElement("font");
+                document.body.firstElementChild.appendChild(icon);
+                icon.innerHTML = "●";
+                icon.color = colors[p];
+                icon.style.position = "absolute";
+                icon.size = 4;
+                icon.style.userSelect = "none";
+                icon.setAttribute("id", id);
+            }
+            else {
+                icon = document.querySelector("#" + id);
+            }
+
+			icon.style.top = (rect.y + window.scrollY + (row.offsetHeight - icon.offsetHeight) / 2 - 2) + "px";
+			icon.style.left = (rect.x + window.scrollX - icon.offsetWidth) + "px";
 		}
 	}
+}
+
+function foldClosedIssues() {
+    // each versions
+    let versions = document.querySelectorAll("#roadmap .version-article.version-incompleted.version-open");
+    let vc = 0;
+    for (ver of versions) {
+        vc++;
+        let tracker = "issue-of-version-" + vc;
+        let leaderId = "issue-leader-" + vc;
+        let rows = ver.querySelectorAll("tr.hascontextmenu.issue.closed")
+        if (rows.length == 0)
+            break;
+        // how many to remain visible
+        let head = 10;
+        let n = 0;
+        let leader = rows[0];
+        if (rows.length > 5)
+            leader = rows[head - 1];
+        for (let i = 0; i < rows.length; i++) {
+            let row = rows[i];
+            n++;
+            if (n > head) {
+                row.style.display = "none";
+                row.classList.add(tracker);
+            }
+        }
+
+        // add toggle icon
+        let rect = leader.getBoundingClientRect();
+        leader.classList.add(leaderId);
+
+        let icon = document.createElement("font");
+        document.body.firstElementChild.appendChild(icon);
+        icon.innerHTML = "▾";
+        icon.size = 5;
+        icon.color = "#909090";
+        icon.style.position = "absolute";
+        icon.style.top = rect.y + window.scrollY + "px";
+        icon.style.left = (rect.x + window.scrollX - icon.offsetWidth + 4) + "px";
+        icon.style.cursor = "pointer";
+        icon.classList.add("fold-icon");
+        icon.style.userSelect = "none";
+        icon.setAttribute("leader", leaderId);
+
+        icon.onclick = function (e) {
+            let issues = document.querySelectorAll("." + tracker);
+            for (issue of issues) {
+                issue.style.display = (issue.style.display == "none") ? "" : "none";
+            }
+            this.innerHTML = (this.innerHTML == "▾") ? "▴" : "▾";
+            // re-position the icons
+            let buttons = document.querySelectorAll(".fold-icon");
+            for (btn of buttons) {
+                let id = btn.getAttribute("leader");
+                let who = document.querySelector("." + id);
+                let box = who.getBoundingClientRect();
+                btn.style.top = box.y + window.scrollY + "px"; 
+            }
+            // re-position the dot icons
+            setPriorityIcons();
+        }
+    }
 }
 
 function onRendered() {
@@ -130,7 +205,8 @@ function onRendered() {
         }
     }
 
-	addPriorityIcons();
+	setPriorityIcons();
+	foldClosedIssues();
 }
 
 setTimeout(onRendered, 0);
